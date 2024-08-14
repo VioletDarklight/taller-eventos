@@ -11,10 +11,11 @@
 
 <body>
  <div id="barra" class="barra">
-  <button onclick="saluda()">Saludar</button>
+  <button onclick="saluda(event)">Saludar</button>
  </div>
  <script>
-  function saluda() {
+  function saluda(event) {
+    event.stopPropagation();
    alert("Hola!")
   }
  </script>
